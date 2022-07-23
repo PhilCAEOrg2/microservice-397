@@ -145,7 +145,6 @@ public class Res extends RESTService {
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Dish not found"),
        @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "Returns single dish item.")
   })
   @ApiOperation(value = "getDishById", notes = " ")
@@ -162,15 +161,6 @@ public class Res extends RESTService {
 
 
 
-    // nf
-    boolean nf_condition = true;
-    if(nf_condition) {
-      JSONObject nf = new JSONObject();
-
-      
-
-      return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(nf.toJSONString()).build();
-    }
     // res
     boolean res_condition = true;
     if(res_condition) {
