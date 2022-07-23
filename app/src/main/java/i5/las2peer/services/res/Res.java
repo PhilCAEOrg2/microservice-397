@@ -145,7 +145,7 @@ public class Res extends RESTService {
   @Produces(MediaType.APPLICATION_JSON)
   @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
-       @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Dish not found."),
+       @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Dish not found"),
        @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "Returns single dish item.")
   })
   @ApiOperation(value = "getDishById", notes = " ")
