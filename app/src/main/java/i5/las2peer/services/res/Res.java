@@ -87,7 +87,103 @@ public class Res extends RESTService {
 
     private final Res service = (Res) Context.getCurrent().getService();
 
-    
+      /**
+   * 
+   * listDishes
+   *
+   * 
+   *
+   * 
+   * @return Response List of all dishes.
+   * 
+   */
+  @GET
+  @Path("/dishes")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "List of all dishes.")
+  })
+  @ApiOperation(value = "listDishes", notes = " ")
+  public Response listDishes() {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // ok
+    boolean ok_condition = true;
+    if(ok_condition) {
+      JSONObject ok = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_OK).entity(ok.toJSONString()).build();
+    }
+    return null;
+  }
+
+  /**
+   * 
+   * getDishById
+   *
+   * 
+   * @param id  a String
+   * 
+   * @return Response Returns single dish item.
+   * 
+   */
+  @GET
+  @Path("/dishes/{id}")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_NOT_FOUND, message = "Dish not found."),
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "Returns single dish item.")
+  })
+  @ApiOperation(value = "getDishById", notes = " ")
+  public Response getDishById(@PathParam("id") String id) {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // nf
+    boolean nf_condition = true;
+    if(nf_condition) {
+      JSONObject nf = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_NOT_FOUND).entity(nf.toJSONString()).build();
+    }
+    // res
+    boolean res_condition = true;
+    if(res_condition) {
+      JSONObject res = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_OK).entity(res.toJSONString()).build();
+    }
+    return null;
+  }
+
+
 
   }
 
